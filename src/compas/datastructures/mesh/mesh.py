@@ -5085,7 +5085,8 @@ class Mesh(Datastructure):
         mesh_bottom.flip_cycles()
 
         # join parts
-        thickened_mesh = mesh_top.join(mesh_bottom)
+        thickened_mesh = mesh_top.copy()
+        thickened_mesh.join(mesh_bottom)
 
         # close boundaries
         n = thickened_mesh.number_of_vertices() / 2

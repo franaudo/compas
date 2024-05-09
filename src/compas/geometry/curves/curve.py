@@ -98,7 +98,7 @@ class Curve(Geometry):
         if not frame:
             self._frame = None
         else:
-            self._frame = Frame(frame[0], frame[1], frame[2])
+            self._frame = frame
         self._transformation = None
 
     @property

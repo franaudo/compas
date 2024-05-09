@@ -78,7 +78,8 @@ class Data(object):
 
     @property
     def __data__(self):
-        raise NotImplementedError
+        # raise NotImplementedError
+        return None
 
     def __jsondump__(self, minimal=False):
         """Return the required information for serialization with the COMPAS JSON serializer.

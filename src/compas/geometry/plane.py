@@ -9,6 +9,7 @@ from compas.tolerance import TOL
 from compas.geometry import cross_vectors
 from compas.geometry import bestfit_plane
 from compas.geometry import Geometry
+from compas.geometry import Frame
 from .vector import Vector
 from .point import Point
 
@@ -137,6 +138,10 @@ class Plane(Geometry):
         a, b, c = self.normal
         d = self.d
         return a, b, c, d
+
+    @property
+    def frame(self):
+        return Frame.from_plane(self)
 
     # ==========================================================================
     # Constructors

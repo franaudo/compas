@@ -309,6 +309,10 @@ class Box(Shape):
     def top(self):
         return [4, 5, 6, 7]
 
+    @property
+    def points(self):
+        mesh = self.to_mesh()
+        return [mesh.vertex_point(v) for v in mesh.vertices()]
     # ==========================================================================
     # Constructors
     # ==========================================================================
